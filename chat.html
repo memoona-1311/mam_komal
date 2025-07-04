@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Our First Chat</title>
+  <link rel="stylesheet" href="chat.css" />
+</head>
+<body>
+  <div class="chat-box" id="chat-box">
+    <div class="chat-date">July 16, 2021</div>
+  
+    <div class="chat-message friend">
+      <span class="sender">Her:</span>
+      <p>Hey, do you remember the first time we talked?</p>
+      <span class="timestamp">10:12 AM</span>
+    </div>
+  
+    <div class="chat-message you">
+      <span class="sender">You:</span>
+      <p>Yes! It was one of the best days of my life 💕</p>
+      <span class="timestamp">10:13 AM</span>
+    </div>
+  
+    <div class="chat-message friend">
+      <span class="sender">Her:</span>
+      <p>I’m really grateful Allah brought us together. You're special to me 🤍</p>
+      <span class="timestamp">10:15 AM</span>
+    </div>
+  </div>
+
+
+
+
+<!-- Continue Button -->
+<div class="continue-wrapper">
+  <button id="continueBtn">Continue ➡️</button>
+</div>
+
+<!-- Modal Popup -->
+<div id="choiceModal" class="modal hidden">
+  <div class="modal-content">
+    <h2>One Last Question…</h2>
+    <p>Do you want to see a memory that made us happy or something that once made us sad?</p>
+    <div class="modal-buttons">
+      <button id="happyBtn">😊 Happy</button>
+      <button id="sadBtn">😢 Sad</button>
+    </div>
+
+    <p id="typed-response" class="hidden"></p>
+
+  </div>
+</div>
+
+
+  <script src="chat-script.js"></script>
+</body>
+</html>

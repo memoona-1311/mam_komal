@@ -43,3 +43,53 @@
 
   animateStars();
 
+
+
+  const revealBtn = document.getElementById("reveal-btn");
+  const messageBox = document.querySelector(".message-box");
+  const typedElement = document.getElementById("typed-message");
+  const chatLink = document.querySelector(".chat-link");
+  
+  messageBox.style.display = "none";
+  chatLink.style.display = "none"; // 🔒 Hide chat button on load
+  
+  const messages = [
+    "You're not just a friend, you're my chosen sister. 💖",
+    "On this day, the world was gifted with your light.",
+    "You’ve always been my safe place — my best listener, my loudest cheerleader.",
+    "I pray your heart is always filled with peace and joy. 🌙",
+    "Happy Birthday, my precious soul. May today be as beautiful as you are. 🎉"
+  ];
+  
+  let messageIndex = 0;
+  let charIndex = 0;
+  
+  function typeMessage() {
+    if (charIndex < messages[messageIndex].length) {
+      typedElement.textContent += messages[messageIndex].charAt(charIndex);
+      charIndex++;
+      setTimeout(typeMessage, 50); // Typing speed
+    } else {
+      setTimeout(() => {
+        charIndex = 0;
+        messageIndex++;
+        if (messageIndex < messages.length) {
+          typedElement.textContent = "";
+          typeMessage();
+        } else {
+          chatLink.style.display = "block"; // ✅ Show after all messages
+        }
+      }, 2000);
+    }
+  }
+  
+  revealBtn.addEventListener("click", function () {
+    revealBtn.style.display = "none";
+    messageBox.style.display = "block";
+    typeMessage(); // ✅ Start typing only after button click
+  });
+  
+
+
+
+  

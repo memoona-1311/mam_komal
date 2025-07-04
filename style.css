@@ -1,10 +1,8 @@
-
-
-       body {
+/* Base styles */
+body {
          margin: 0;
          padding: 0;
          overflow: hidden;
-         font-family: 'Arial', sans-serif;
          background: black;
          height: 100vh;
          display: flex;
@@ -13,6 +11,19 @@
          position: relative;
          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
        }
+
+       .content {
+        position: relative;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 40px 20px;
+        max-width: 100%;
+      }
+      
        
        .stars, .twinkling {
          position: absolute;
@@ -21,6 +32,7 @@
          width: 100%;
          height: 100%;
          display: block;
+         z-index: 0;
        }
        
        .stars {
@@ -32,12 +44,10 @@
            radial-gradient(2px 2px at 10% 10%, white 50%, transparent 100%),
            radial-gradient(1.5px 1.5px at 90% 40%, white 50%, transparent 100%),
            radial-gradient(1px 1px at 70% 80%, white 50%, transparent 100%);
-         z-index: 0;
        }
        
        .twinkling {
          animation: twinkle 5s infinite alternate;
-         z-index: 0;
        }
        
        @keyframes twinkle {
@@ -45,10 +55,66 @@
          100% { opacity: 0.3; }
        }
        
+       /* Canvas */
+       #star-canvas {
+         position: absolute;
+         top: 0;
+         left: 0;
+         z-index: 0;
+       }
 
-
-
-
+       #reveal-btn {
+        position: absolute;
+        z-index: 2;
+        padding: 14px 32px;
+        font-size: 18px;
+        background-color: deeppink;
+        color: white;
+        border: none;
+        border-radius: 12px;
+        cursor: pointer;
+        box-shadow: 0 0 15px pink;
+        transition: transform 0.2s ease;
+        white-space: nowrap; /* 💡 Prevent line breaks */
+        min-width: 180px;     /* 💡 Optional: Force minimum width */
+        text-align: center;
+      }
+      
+       
+       #reveal-btn:hover {
+         transform: scale(1.05);
+       }
+       
+       
+       /* Message box */
+       .message-box {
+         background: rgba(255, 192, 203, 0.1);
+         padding: 20px 30px;
+         border: 2px solid pink;
+         border-radius: 15px;
+         color: #ffb6c1;
+         font-family: 'Courier New', monospace;
+         text-align: center;
+         animation: popInGlow 1.5s ease-out forwards, heartbeat 2s infinite 1.6s;
+         z-index: 1;
+         max-width: 90vw;
+         box-sizing: border-box;
+       }
+       
+       .message-box h1 {
+         font-size: 6vw;
+         margin-bottom: 10px;
+       }
+       
+       .message-box p {
+         font-size: 4.5vw;
+         line-height: 1.4;
+         min-height: 3em; /* Keeps height steady between transitions */
+         margin: 0;
+       }
+       
+       
+       /* Animations */
        @keyframes popInGlow {
          0% {
            transform: scale(0.5);
@@ -76,24 +142,95 @@
            box-shadow: 0 0 25px hotpink;
          }
        }
-       
-       .message-box {
-         background: rgba(255, 192, 203, 0.1);
-         padding: 40px 60px;
-         border: 2px solid pink;
-         border-radius: 15px;
-         color: #ffb6c1;
-         font-size: 24px;
-         font-family: 'Courier New', monospace;
-         text-align: center;
-         animation: popInGlow 1.5s ease-out forwards, heartbeat 2s infinite 1.6s;
-         z-index: 1;
-       }
 
-              #star-canvas {
-         position: absolute;
-         top: 0;
-         left: 0;
-         z-index: 0;
+
+
+       /* .chat-link {
+        margin-top: 30px;
+        text-align: center;
+      } */
+      
+      .chat-link a {
+        color: pink;
+        font-weight: bold;
+        font-size: 1rem;
+        text-decoration: none;
+      }
+/*       
+      .chat-link a:hover {
+        text-decoration: underline;
+      } */
+      
+
+
+      .chat-link {
+        margin-top: 30px;
+        text-align: center;
+      }
+      
+      .chat-link a {
+        display: inline-block;
+        background-color: rgba(255, 105, 180, 0.1); 
+        color: #ffb6c1;
+        border: 2px solid #ff69b4;
+        border-radius: 8px;
+        padding: 12px 24px;
+        font-size: 16px;
+        text-decoration: none;
+        font-family: 'Courier New', monospace;
+        box-shadow: 0 0 15px hotpink;
+        transition: all 0.3s ease;
+      }
+      
+      .chat-link a:hover {
+        background-color: #ff69b4;
+        color: white;
+        box-shadow: 0 0 25px deeppink;
+        transform: scale(1.05);
+      }
+      
+
+
+
+
+
+
+
+
+      .hidden {
+        display: none;
+      }
+      
+
+
+
+
+
+       
+       
+       /* Responsive font sizes for larger devices */
+       @media (min-width: 768px) {
+         .message-box {
+           padding: 40px 60px;
+           max-width: 600px;
+         }
+       
+         .message-box h1 {
+           font-size: 32px;
+         }
+       
+         .message-box p {
+           font-size: 20px;
+         }
+       }
+       
+       @media (min-width: 1024px) {
+         .message-box h1 {
+           font-size: 36px;
+         }
+       
+         .message-box p {
+           font-size: 22px;
+         }
        }
        

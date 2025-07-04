@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Happy Memories</title>
+    <style>
+      body {
+        background: #111;
+        color: #fff;
+        font-family: "Segoe UI", sans-serif;
+        padding: 20px;
+      }
+
+      h1 {
+        text-align: center;
+        color: #ff69b4;
+        margin-bottom: 30px;
+      }
+
+      .selector {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      select {
+        padding: 10px 20px;
+        border-radius: 8px;
+        border: none;
+        background: #333;
+        color: #ff69b4;
+        font-size: 16px;
+        box-shadow: 0 0 10px hotpink;
+      }
+
+      .chat-box {
+        max-width: 600px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .message {
+        padding: 10px 15px;
+        border-radius: 15px;
+        max-width: 80%;
+        font-size: 14px;
+        position: relative;
+        word-wrap: break-word;
+      }
+
+      .her {
+        background-color: #222;
+        align-self: flex-start;
+        border: 1px solid #ff69b4;
+      }
+
+      .me {
+        background-color: #ff69b4;
+        color: black;
+        align-self: flex-end;
+      }
+
+      .timestamp {
+        font-size: 10px;
+        color: red;
+        margin-top: 3px;
+        text-align: right;
+      }
+
+      .timeline {
+        max-width: 600px;
+        margin: 40px auto;
+        padding-left: 20px;
+        border-left: 3px solid hotpink;
+      }
+
+      .timeline .event {
+        margin-bottom: 25px;
+        position: relative;
+      }
+
+      .timeline .event::before {
+        content: "🔸";
+        position: absolute;
+        left: -20px;
+        color: #ff69b4;
+        font-size: 18px;
+        top: 0;
+      }
+
+      .timeline .event:first-child::before {
+        content: "🔹"; /* special icon for first call */
+      }
+
+      .timeline .event:last-child p {
+        font-weight: bold;
+        color: #ff69b4;
+      }
+      .date {
+        font-size: 14px;
+        color: #aaa;
+      }
+      .bye-button-wrapper {
+        display: flex;
+        justify-content: center;
+        margin: 40px 0;
+      }
+
+      .bye-button {
+        padding: 12px 24px;
+        font-size: 16px;
+        border-radius: 8px;
+        background-color: transparent;
+        color: pink;
+        border: 2px solid pink;
+        cursor: pointer;
+        box-shadow: 0 0 10px hotpink;
+        transition: all 0.3s ease;
+      }
+
+      .bye-button:hover {
+        background-color: hotpink;
+        color: white;
+      }
+
+      /* Modal Styles */
+      .modal {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.8);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 999;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.4s ease;
+      }
+
+      .modal-content {
+        position: relative;
+        background: #222;
+        border: 2px solid pink;
+        padding: 30px 20px;
+        border-radius: 10px;
+        max-width: 500px;
+        width: 90%;
+        text-align: center;
+        color: pink;
+        font-family: monospace;
+        box-shadow: 0 0 20px hotpink;
+        animation: fadeIn 0.5s ease;
+        overflow: hidden;
+      }
+
+
+#particleCanvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.modal-content h2,
+.modal-content p,
+.modal-content .close {
+  position: relative;
+  z-index: 1;
+}
+
+      .modal.show {
+        opacity: 1;
+        pointer-events: auto;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: scale(0.9);
+        }
+        to {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+
+      .close {
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        font-size: 24px;
+        cursor: pointer;
+        color: pink;
+        font-weight: bold;
+      }
+
+      .hidden {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Happy Memories 📅</h1>
+
+    <div class="selector">
+      <label for="dateSelect">Choose a date to view messages:</label>
+      <br /><br />
+      <select id="dateSelect">
+        <option value="">-- Select Date --</option>
+        <option value="2025-03-19">March 19, 2025</option>
+        <!-- You can add more dates later -->
+      </select>
+    </div>
+
+    <div class="chat-box" id="chatBox"></div>
+
+    <h2 style="text-align: center; margin-top: 60px; color: #ff69b4">
+      📞 Our Call Journey
+    </h2>
+
+    <div class="timeline">
+      <div class="event">
+        <span class="date">April 9, 2025</span>
+        <p>First Call – 1 minute 33 seconds 💖</p>
+      </div>
+      <div class="event">
+        <span class="date">April 15, 2025</span>
+        <p>10 minutes</p>
+      </div>
+      <div class="event">
+        <span class="date">April 20, 2025</span>
+        <p>30 minutes</p>
+      </div>
+      <div class="event">
+        <span class="date">May 1, 2025</span>
+        <p>1 hour 15 minutes</p>
+      </div>
+      <div class="event">
+        <span class="date">May 15, 2025</span>
+        <p>3 hours</p>
+      </div>
+      <div class="event">
+        <span class="date">June 10, 2025</span>
+        <p>6 hours</p>
+      </div>
+      <div class="event">
+        <span class="date">July 1, 2025</span>
+        <p>8 hours ❤️</p>
+      </div>
+    </div>
+
+    <!-- Bye Button (placed after messages/call timeline) -->
+    <div class="bye-button-wrapper">
+      <button id="byeBtn" class="bye-button">Bye 👋</button>
+    </div>
+
+    <!-- Final Message Modal -->
+    <div id="finalModal" class="modal hidden">
+      <div class="modal-content">
+        <span id="closeModal" class="close">&times;</span>
+        <canvas id="particleCanvas"></canvas>
+        <h2>🌸 One Last Thing...</h2>
+        <p id="finalMessageTyping"></p>
+      </div>
+    </div>
+
+    <script>
+      const chatBox = document.getElementById("chatBox");
+      const dateSelect = document.getElementById("dateSelect");
+
+      const messages = {
+        "2025-03-19": [
+          { sender: "her", text: "Thank a lot", time: "5:20 PM" },
+          { sender: "her", text: "Belkul pagal ho tum", time: "5:20 PM" },
+          {
+            sender: "me",
+            text: "Madam kl certificate bana kr dijaye ga tb manu gi m",
+            time: "5:22 PM",
+          },
+        ],
+      };
+
+      dateSelect.addEventListener("change", () => {
+        const selected = dateSelect.value;
+        chatBox.innerHTML = ""; // clear previous
+
+        if (messages[selected]) {
+          messages[selected].forEach((msg) => {
+            const msgDiv = document.createElement("div");
+            msgDiv.classList.add("message", msg.sender);
+
+            msgDiv.innerHTML = `
+            ${msg.text}
+            <div class="timestamp">${msg.time}</div>
+          `;
+
+            chatBox.appendChild(msgDiv);
+          });
+        }
+      });
+
+      const byeBtn = document.getElementById("byeBtn");
+      const finalModal = document.getElementById("finalModal");
+      const closeModal = document.getElementById("closeModal");
+      const finalMessageTyping = document.getElementById("finalMessageTyping");
+
+      const finalText = `Even if we talk less someday, or stop altogether…
+Just know that you were special to me, always will be. 💖
+Thank you... for being you. 💫`;
+
+      function typeText(text, el, delay = 40) {
+        let i = 0;
+        el.textContent = "";
+        const interval = setInterval(() => {
+          el.textContent += text.charAt(i);
+          i++;
+          if (i >= text.length) clearInterval(interval);
+        }, delay);
+      }
+
+      byeBtn.addEventListener("click", () => {
+        finalModal.classList.remove("hidden");
+        finalModal.classList.add("show");
+        typeText(finalText, finalMessageTyping);
+      });
+
+      closeModal.addEventListener("click", () => {
+        finalModal.classList.remove("show");
+        setTimeout(() => finalModal.classList.add("hidden"), 300);
+      });
+
+      window.addEventListener("click", (e) => {
+        if (e.target === finalModal) {
+          finalModal.classList.remove("show");
+          setTimeout(() => finalModal.classList.add("hidden"), 300);
+        }
+      });
+
+      const canvas = document.getElementById("particleCanvas");
+  const ctx = canvas.getContext("2d");
+  let particles = [];
+
+  function resizeCanvas() {
+    canvas.width = canvas.offsetWidth;
+    canvas.height = canvas.offsetHeight;
+  }
+
+  window.addEventListener("resize", resizeCanvas);
+
+  function createParticles() {
+    particles = [];
+    for (let i = 0; i < 30; i++) {
+      particles.push({
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        radius: Math.random() * 2 + 1,
+        opacity: Math.random() * 0.5 + 0.3,
+        speedY: Math.random() * 0.5 + 0.2,
+      });
+    }
+  }
+
+  function drawParticles() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    for (let p of particles) {
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+      ctx.fillStyle = `rgba(255, 182, 193, ${p.opacity})`; // light pink
+      ctx.fill();
+      p.y += p.speedY;
+      if (p.y > canvas.height) {
+        p.y = 0;
+        p.x = Math.random() * canvas.width;
+      }
+    }
+  }
+
+  function animateParticles() {
+    drawParticles();
+    requestAnimationFrame(animateParticles);
+  }
+
+  // Start animation when modal opens
+  byeBtn.addEventListener('click', () => {
+    finalModal.classList.remove('hidden');
+    finalModal.classList.add('show');
+    typeText(finalText, finalMessageTyping);
+    resizeCanvas();
+    createParticles();
+    animateParticles();
+  });
+    </script>
+  </body>
+</html>
