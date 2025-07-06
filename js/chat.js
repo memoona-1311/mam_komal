@@ -34,11 +34,13 @@ function typeAndRedirect(text, redirectUrl) {
 happyBtn.addEventListener("click", () => {
   happyBtn.disabled = true;
   sadBtn.disabled = true;
-  typeAndRedirect("Thank you for choosing happiness 💖 You're about to smile again...", "happy.html");
+typeAndRedirect("You chose joy — just like you bring it into my life 💖 Let's relive the good times...", "happy.html");
+
 });
 
 sadBtn.addEventListener("click", () => {
   happyBtn.disabled = true;
   sadBtn.disabled = true;
-  typeAndRedirect("Why did you choose this on your birthday? 😢 But guess what…", "sad.html");
+  typeAndRedirect("You picked a tear... but there’s love hidden here too. Let me show you. 💭", "sad.html");
+
 });
