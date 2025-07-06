@@ -168,8 +168,7 @@
       }
 
       .modal-content h2,
-      .modal-content p,
-      .modal-content .close {
+      .modal-content p{
         position: relative;
         z-index: 1;
       }
@@ -283,3 +282,4 @@ date.clickable {
 .date.clickable:hover {
   text-decoration: underline;
 }
+

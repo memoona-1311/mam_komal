@@ -1349,14 +1349,40 @@
 
     <!-- Final Message Modal -->
     <div id="finalModal" class="modal hidden">
-      <div class="modal-content">
+      <!-- <div class="modal-content">
         <span id="closeModal" class="close">&times;</span>
         <canvas id="particleCanvas"></canvas>
         <h2>🌸 One Last Thing...</h2>
         <p id="finalMessageTyping"></p>
+      </div> -->
+      <div class="modal-content">
+        <span id="closeModal" class="close">&times;</span>
+        <canvas id="particleCanvas"></canvas>
+
+        <h2>🌸 One Last Thing...</h2>
+
+  
+        <div id="finalMessageContainer">
+          <p id="finalMessageTyping"></p>
+        </div>
+
+  
+
+
+        <!-- Hidden icon by default -->
+        <span
+          id="downloadImageIcon"
+          title="Download this message"
+          class="hidden"
+          style="cursor: pointer; font-size: 20px"
+          >📸</span
+        >
       </div>
     </div>
 
+
+      
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
     <script src="./js/happy.js"></script>
   </body>
 </html>
