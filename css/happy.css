@@ -1,0 +1,287 @@
+      *{
+         box-sizing: border-box;
+      }
+      body {
+        background: #111;
+        color: #fff;
+        font-family: "Segoe UI", sans-serif;
+        padding: 20px;
+      }
+
+      h1 {
+        text-align: center;
+        color: #ff69b4;
+        margin-bottom: 30px;
+      }
+
+      .selector {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      select {
+        padding: 10px 20px;
+        border-radius: 8px;
+        border: none;
+        background: #333;
+        color: #ff69b4;
+        font-size: 16px;
+        box-shadow: 0 0 10px hotpink;
+      }
+
+      .chat-box {
+        max-width: 600px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .message {
+        padding: 10px 15px;
+        border-radius: 15px;
+        max-width: 80%;
+        font-size: 14px;
+        position: relative;
+        word-wrap: break-word;
+      }
+
+      .her {
+        background-color: #222;
+        align-self: flex-start;
+        border: 1px solid #ff69b4;
+      }
+
+      .me {
+        background-color: #ff69b4;
+        color: black;
+        align-self: flex-end;
+      }
+
+      .timestamp {
+        font-size: 10px;
+        color: red;
+        margin-top: 3px;
+        text-align: right;
+      }
+
+      .timeline {
+        max-width: 600px;
+        margin: 40px auto;
+        padding-left: 20px;
+        border-left: 3px solid hotpink;
+      }
+
+      .timeline .event {
+        margin-bottom: 25px;
+        position: relative;
+      }
+
+      .timeline .event::before {
+        content: "🔸";
+        position: absolute;
+        left: -20px;
+        color: #ff69b4;
+        font-size: 18px;
+        top: 0;
+      }
+
+      .timeline .event:first-child::before {
+        content: "🔹";
+        /* special icon for first call */
+      }
+
+      .timeline .event:last-child p {
+        font-weight: bold;
+        color: #ff69b4;
+      }
+
+      .date {
+        font-size: 14px;
+        color: #aaa;
+      }
+
+      .bye-button-wrapper {
+        display: flex;
+        justify-content: center;
+        margin: 40px 0;
+      }
+
+      .bye-button {
+        padding: 12px 24px;
+        font-size: 16px;
+        border-radius: 8px;
+        background-color: transparent;
+        color: pink;
+        border: 2px solid pink;
+        cursor: pointer;
+        box-shadow: 0 0 10px hotpink;
+        transition: all 0.3s ease;
+      }
+
+      .bye-button:hover {
+        background-color: hotpink;
+        color: white;
+      }
+
+      /* Modal Styles */
+      .modal {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.8);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 999;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.4s ease;
+      }
+
+      .modal-content {
+        position: relative;
+        background: #222;
+        border: 2px solid pink;
+        padding: 30px 20px;
+        border-radius: 10px;
+        max-width: 500px;
+        width: 90%;
+        text-align: center;
+        color: pink;
+        font-family: monospace;
+        box-shadow: 0 0 20px hotpink;
+        animation: fadeIn 0.5s ease;
+        overflow: hidden;
+      }
+
+      #particleCanvas {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+        pointer-events: none;
+      }
+
+      .modal-content h2,
+      .modal-content p{
+        position: relative;
+        z-index: 1;
+      }
+
+      .modal.show {
+        opacity: 1;
+        pointer-events: auto;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: scale(0.9);
+        }
+
+        to {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+
+      .close {
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        font-size: 24px;
+        cursor: pointer;
+        color: pink;
+        font-weight: bold;
+      }
+
+      .hidden {
+        display: none;
+      }
+
+ /* Keep the entire month block centered */
+.month-block {
+  margin: 20px auto;
+  max-width: 700px; /* or adjust based on your layout */
+}
+
+/* Style the button to be centered and not full width */
+.month-btn {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  display: block;
+  padding: 12px;
+  font-size: 18px;
+  background: #111;
+  color: #ff69b4;
+  border: 2px solid #ff69b4;
+  cursor: pointer;
+  border-radius: 8px;
+  text-align: left;
+}
+
+/* Make the content under the button match width and center */
+.month-content {
+  display: none;
+  padding: 10px 20px;
+  max-width: 600px;
+  margin: 10px auto 0 auto;
+  border-left: 2px dashed #ff69b4;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.month-btn:hover {
+  background: #222;
+}
+/* .month-content {
+  display: none;
+  padding-left: 20px;
+  margin-top: 10px;
+} */
+
+.event { margin: 15px 0; }
+.date { font-weight: bold; color: #ff69b4; }
+
+.call-summary {
+  cursor: pointer;
+  color: #ddd;
+}
+.call-summary:hover { text-decoration: underline; }
+
+.call-details {
+  background-color: rgba(255, 182, 193, 0.1);
+  color: #fff;
+  padding: 8px;
+  margin-top: 5px;
+  border-left: 3px solid #ff69b4;
+  font-size: 14px;
+  border-radius: 5px;
+}
+.call-details ul { padding-left: 20px; }
+.call-details li { margin: 5px 0; }
+.toggle-hint {
+  margin-left: 8px;
+  color: #bbb;
+}
+
+
+date.clickable {
+  cursor: pointer;
+  font-weight: bold;
+  color: #ff69b4;
+  margin-bottom: 5px;
+}
+
+.date.clickable:hover {
+  text-decoration: underline;
+}
+
+
+

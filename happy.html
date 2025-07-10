@@ -1,0 +1,1451 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Happy Memories</title>
+    <link rel="stylesheet" href="./css/happy.css" />
+  </head>
+
+  <body>
+    <h1>Happy Memories 📅</h1>
+
+    <div class="selector">
+      <label for="dateSelect">Choose a date to view messages:</label>
+      <br /><br />
+      <select id="dateSelect">
+        <option value="">-- Select Date --</option>
+        <option value="2025-03-19">March 19, 2025</option>
+        <option value="2025-04-09">April 9, 2025</option>
+        <option value="2025-04-10">April 10, 2025</option>
+        <option value="2025-04-12">April 12, 2025</option>
+        <option value="2025-05-17">May 17, 2025</option>
+        <option value="2025-06-05">June 5, 2025</option>
+        <option value="2025-06-16">June 16, 2025</option>
+        <option value="2025-07-04">July 4, 2025</option>
+        <option value="Daily">Daily Messages</option>
+      </select>
+    </div>
+
+    <div class="chat-box" id="chatBox"></div>
+
+    <h2 style="text-align: center; margin-top: 60px; color: #ff69b4">
+      📞 Our Call Journey
+    </h2>
+
+    <div id="callLog">
+      <!-- Month Block  -->
+
+      <!-- March -->
+      <div class="month-block">
+        <button class="month-btn">📅 March 2025</button>
+        <div class="month-content">
+          <!-- March 4 -->
+          <div class="event">
+            <div class="date clickable" onclick="toggleEventDetails(this)">
+              📅 March 4, 2025 <span class="toggle-hint">[+]</span>
+            </div>
+            <div class="event-details" style="display: none">
+              <div class="call-summary">
+                <p>🚫 Not answered – 12:47 PM</p>
+              </div>
+              <div class="call-details">
+                <strong>Calls by Me</strong>
+                <ul>
+                  <li>🚫 Not answered – 12:47 PM</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- March 6 -->
+          <div class="event">
+            <div class="date clickable" onclick="toggleEventDetails(this)">
+              📅 March 6, 2025 <span class="toggle-hint">[+]</span>
+            </div>
+            <div class="event-details" style="display: none">
+              <div class="call-summary">
+                <p>❌ Missed – 8:50 PM</p>
+              </div>
+              <div class="call-details">
+                <strong>Calls by Her</strong>
+                <ul>
+                  <li>❌ Missed – 8:50 PM</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- March 27 -->
+          <div class="event">
+            <div class="date clickable" onclick="toggleEventDetails(this)">
+              📅 March 27, 2025 <span class="toggle-hint">[+]</span>
+            </div>
+            <div class="event-details" style="display: none">
+              <div class="call-summary">
+                <p>❌ Missed – 7:10 PM & 7:16 PM</p>
+              </div>
+              <div class="call-details">
+                <strong>Calls by Her</strong>
+                <ul>
+                  <li>❌ Missed – 7:10 PM</li>
+                  <li>❌ Missed – 7:16 PM</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- April Section -->
+      <div class="month-block">
+        <button class="month-btn">📅 April 2025</button>
+        <div class="month-content">
+          <!-- April 5 -->
+          <div class="event">
+            <div class="date clickable" onclick="toggleEventDetails(this)">
+              📅 April 5, 2025 <span class="toggle-hint">[+]</span>
+            </div>
+            <div class="event-details" style="display: none">
+              <div class="call-summary">
+                <p>❌ Missed – 5:15 PM</p>
+              </div>
+              <div class="call-details">
+                <strong>Calls by Her</strong>
+                <ul>
+                  <li>❌ Missed – 5:15 PM</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- April 8 -->
+          <div class="event">
+            <div class="date clickable" onclick="toggleEventDetails(this)">
+              📅 April 8, 2025 <span class="toggle-hint">[+]</span>
+            </div>
+            <div class="event-details" style="display: none">
+              <div class="call-summary">
+                <p>📵 Not Answered – 11:45 AM</p>
+              </div>
+              <div class="call-details">
+                <strong>Calls by Me</strong>
+                <ul>
+                  <li>📵 Not Answered – 11:45 AM</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- April 9 -->
+          <div class="event">
+            <div class="date clickable" onclick="toggleEventDetails(this)">
+              📅 April 9, 2025 <span class="toggle-hint">[+]</span>
+            </div>
+            <div class="event-details" style="display: none">
+              <div class="call-summary">
+                <p>📞 Answered – 6:34 PM (1 min 33 sec) 💖</p>
+              </div>
+              <div class="call-details">
+                <strong>Calls by Her</strong>
+                <ul>
+                  <li>📞 Answered – 6:34 PM (1 min 33 sec) 💖</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- April 10 -->
+          <div class="event">
+            <div class="date clickable" onclick="toggleEventDetails(this)">
+              📅 April 10, 2025 <span class="toggle-hint">[+]</span>
+            </div>
+            <div class="event-details" style="display: none">
+              <div class="call-summary">
+                <p>📞 Answered – 9:20 AM & 9:21 AM</p>
+              </div>
+              <div class="call-details">
+                <strong>Calls by Her</strong>
+                <ul>
+                  <li>📞 Answered – 9:20 AM (24 sec)</li>
+                  <li>📞 Answered – 9:21 AM (47 sec)</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- May Section -->
+      <div class="month-block">
+        <button class="month-btn">📅 May 2025</button>
+        <div class="month-content">
+          <!-- May 15 -->
+          <div class="event">
+            <div class="date clickable" onclick="toggleEventDetails(this)">
+              📅 May 15, 2025 <span class="toggle-hint">[+]</span>
+            </div>
+            <div class="event-details" style="display: none">
+              <div class="call-summary">
+                <p>📞 Answered – 10:08 PM (47 min 34 sec)</p>
+              </div>
+              <div class="call-details">
+                <strong>Calls by Her</strong>
+                <ul>
+                  <li>📞 Answered – 10:08 PM (47 min 34 sec)</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- May 18 -->
+          <div class="event">
+            <div class="date clickable" onclick="toggleEventDetails(this)">
+              📅 May 18, 2025 <span class="toggle-hint">[+]</span>
+            </div>
+            <div class="event-details" style="display: none">
+              <div class="call-summary">
+                <p>📞 Answered – 6:54 PM (13 sec)</p>
+              </div>
+              <div class="call-details">
+                <strong>Calls by Me</strong>
+                <ul>
+                  <li>📞 Answered – 6:54 PM (13 sec)</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- May 23 -->
+          <div class="event">
+            <div class="date clickable" onclick="toggleEventDetails(this)">
+              📅 May 23, 2025 <span class="toggle-hint">[+]</span>
+            </div>
+            <div class="event-details" style="display: none">
+              <div class="call-summary">
+                <p>❌ Missed – 9:24 PM</p>
+              </div>
+              <div class="call-details">
+                <strong>Calls by Her</strong>
+                <ul>
+                  <li>❌ Missed – 9:24 PM</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- May 25 -->
+          <div class="event">
+            <div class="date clickable" onclick="toggleEventDetails(this)">
+              📅 May 25, 2025 <span class="toggle-hint">[+]</span>
+            </div>
+            <div class="event-details" style="display: none">
+              <div class="call-summary">
+                <p>📞 Answered – 11:33 PM & 11:37 PM</p>
+              </div>
+              <div class="call-details">
+                <strong>Calls by Her</strong>
+                <ul>
+                  <li>📞 Answered – 11:33 PM (1 min 47 sec)</li>
+                </ul>
+                <strong>Calls by Me</strong>
+                <ul>
+                  <li>📞 Answered – 11:37 PM (38 min 56 sec)</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- May 26 -->
+          <div class="event">
+            <div class="date clickable" onclick="toggleEventDetails(this)">
+              📅 May 26, 2025 <span class="toggle-hint">[+]</span>
+            </div>
+            <div class="event-details" style="display: none">
+              <div class="call-summary">
+                <p>📞 Multiple answered calls</p>
+              </div>
+              <div class="call-details">
+                <strong>Calls by Me</strong>
+                <ul>
+                  <li>📞 Answered – 12:17 AM (39 sec)</li>
+                  <li>📞 Answered – 12:18 AM (32 sec)</li>
+                  <li>📞 Answered – 12:19 AM (44 min 17 sec)</li>
+                </ul>
+                <strong>Calls by Her</strong>
+                <ul>
+                  <li>📞 Answered – 1:18 AM (1 hr 7 min 54 sec)</li>
+                  <li>📞 Answered – 11:39 PM (3 hr 15 min 38 sec)</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- May 27 -->
+          <div class="event">
+            <div class="date clickable" onclick="toggleEventDetails(this)">
+              📅 May 27, 2025 <span class="toggle-hint">[+]</span>
+            </div>
+            <div class="event-details" style="display: none">
+              <div class="call-summary">
+                <p>📞 Answered – 10:11 PM & 10:14 PM</p>
+              </div>
+              <div class="call-details">
+                <strong>Calls by Her</strong>
+                <ul>
+                  <li>📞 Answered – 10:11 PM (1 min 22 sec)</li>
+                  <li>📞 Answered – 10:14 PM (1 hr 31 min 21 sec)</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- May 28 -->
+          <div class="event">
+            <div class="date clickable" onclick="toggleEventDetails(this)">
+              📅 May 28, 2025 <span class="toggle-hint">[+]</span>
+            </div>
+            <div class="event-details" style="display: none">
+              <div class="call-summary">
+                <p>📵 Declined & 📞 Answered – 5:35 PM & 11:03 PM</p>
+              </div>
+              <div class="call-details">
+                <strong>Calls by Me</strong>
+                <ul>
+                  <li>📵 Declined – 5:35 PM</li>
+                </ul>
+                <strong>Calls by Her</strong>
+                <ul>
+                  <li>📞 Answered – 11:03 PM (4 hr 18 min 5 sec)</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- May 29 -->
+          <div class="event">
+            <div class="date clickable" onclick="toggleEventDetails(this)">
+              📅 May 29, 2025 <span class="toggle-hint">[+]</span>
+            </div>
+            <div class="event-details" style="display: none">
+              <div class="call-summary">
+                <p>📞 Multiple calls (answered + missed)</p>
+              </div>
+              <div class="call-details">
+                <strong>Calls by Me</strong>
+                <ul>
+                  <li>📵 Not Answered – 7:33 PM</li>
+                  <li>📞 Answered – 9:22 PM (25 min 13 sec)</li>
+                  <li>📞 Answered – 9:48 PM (8 min 14 sec)</li>
+                  <li>📞 Answered – 11:26 PM (4 min 47 sec)</li>
+                  <li>📞 Answered – 11:26 PM (7 min 46 sec)</li>
+                </ul>
+                <strong>Calls by Her</strong>
+                <ul>
+                  <li>📞 Answered – 9:21 PM (42 sec)</li>
+                  <li>📞 Answered – 11:01 PM (18 min 3 sec)</li>
+                  <li>📞 Answered – 11:37 PM (49 min 51 sec)</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- May 30 -->
+          <div class="event">
+            <div class="date clickable" onclick="toggleEventDetails(this)">
+              📅 May 30, 2025 <span class="toggle-hint">[+]</span>
+            </div>
+            <div class="event-details" style="display: none">
+              <div class="call-summary">
+                <p>📞 Multiple answered calls + Not answered</p>
+              </div>
+              <div class="call-details">
+                <strong>Calls by Her</strong>
+                <ul>
+                  <li>📞 Answered – 12:30 AM (18 min 40 sec)</li>
+                  <li>📞 Answered – 1:13 AM (38 min 55 sec)</li>
+                  <li>📞 Answered – 1:52 AM (23 min 40 sec)</li>
+                  <li>📞 Answered – 9:15 PM (45 min 23 sec)</li>
+                  <li>📞 Answered – 10:38 PM (12 min 27 sec)</li>
+                  <li>📞 Answered – 11:22 PM (19 min 54 sec)</li>
+                  <li>📞 Answered – 11:43 PM (18 min 33 sec)</li>
+                </ul>
+                <strong>Calls by Me</strong>
+                <ul>
+                  <li>📵 Not Answered – 9:04 PM</li>
+                  <li>📞 Answered – 11:05 PM (15 min 19 sec)</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- May 31 -->
+          <div class="event">
+            <div class="date clickable" onclick="toggleEventDetails(this)">
+              📅 May 31, 2025 <span class="toggle-hint">[+]</span>
+            </div>
+            <div class="event-details" style="display: none">
+              <div class="call-summary">
+                <p>📵 Declined & Not Answered + 📞 Answered – 12:30 AM</p>
+              </div>
+              <div class="call-details">
+                <strong>Calls by Me</strong>
+                <ul>
+                  <li>📵 Declined – 9:36 AM</li>
+                  <li>📵 Not Answered – 10:26 PM</li>
+                  <li>📵 Not Answered – 11:12 PM</li>
+                </ul>
+                <strong>Calls by Her</strong>
+                <ul>
+                  <li>📞 Answered – 12:30 AM (2 hr 5 min 24 sec)</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- June Section -->
+      <div class="month-block">
+        <button class="month-btn">📅 June 2025</button>
+        <div class="month-content">
+          <!-- June 1 -->
+          <div class="event">
+            <div class="date clickable" onclick="toggleEventDetails(this)">
+              📅 June 1 <span class="toggle-hint">[+]</span>
+            </div>
+            <div class="event-details" style="display: none">
+              <div class="call-summary">
+                <p>
+                  📵 Not Answered – 2:17 PM, 📞 Answered – 10:58 PM, 11:26 PM,
+                  11:41 PM
+                </p>
+              </div>
+              <div class="call-details">
+                <strong>Calls by Me</strong>
+                <ul>
+                  <li>📵 Not Answered – 2:17 PM</li>
+                </ul>
+                <strong>Calls by Her</strong>
+                <ul>
+                  <li>📞 Answered – 10:58 PM (24 min 23 sec)</li>
+                  <li>📞 Answered – 11:26 PM (6 min 48 sec)</li>
+                  <li>📞 Answered – 11:41 PM (38 min 53 sec)</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- June 2 -->
+          <div class="event">
+            <div class="date clickable" onclick="toggleEventDetails(this)">
+              📅 June 2 <span class="toggle-hint">[+]</span>
+            </div>
+            <div class="event-details" style="display: none">
+              <div class="call-summary">
+                <p>
+                  📞 Answered – 1:45 AM, 📵 Not Answered – 6:51 PM, 📞 Answered
+                  – 10:21 PM
+                </p>
+              </div>
+              <div class="call-details">
+                <strong>Calls by Her</strong>
+                <ul>
+                  <li>📞 Answered – 1:45 AM (6 min 29 sec)</li>
+                </ul>
+                <strong>Calls by Me</strong>
+                <ul>
+                  <li>📵 Not Answered – 6:51 PM</li>
+                  <li>📞 Answered – 10:21 PM (2 hr 17 min 18 sec)</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- June 3 -->
+          <div class="event">
+            <div class="date clickable" onclick="toggleEventDetails(this)">
+              📅 June 3 <span class="toggle-hint">[+]</span>
+            </div>
+            <div class="event-details" style="display: none">
+              <div class="call-summary">
+                <p>
+                  📞 Answered – 12:39 AM, 6:59 PM, 11:13 PM, 📵 Not Answered –
+                  6:17 PM, 📞 Answered – 6:57 PM
+                </p>
+              </div>
+              <div class="call-details">
+                <strong>Calls by Me</strong>
+                <ul>
+                  <li>📞 Answered – 12:39 AM (4 hr 43 min 54 sec)</li>
+                  <li>📵 Not Answered – 6:17 PM</li>
+                  <li>📞 Answered – 6:59 PM (1 min 19 sec)</li>
+                  <li>📞 Answered – 11:13 PM (48 min 7 sec)</li>
+                </ul>
+                <strong>Calls by Her</strong>
+                <ul>
+                  <li>📞 Answered – 6:57 PM (50 sec)</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- June 4 -->
+          <div class="event">
+            <div class="date clickable" onclick="toggleEventDetails(this)">
+              📅 June 4 <span class="toggle-hint">[+]</span>
+            </div>
+            <div class="event-details" style="display: none">
+              <div class="call-summary"><p>📞 Answered – 10:12 PM</p></div>
+              <div class="call-details">
+                <strong>Calls by Her</strong>
+                <ul>
+                  <li>📞 Answered – 10:12 PM (9 min 0 sec)</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- June 5 -->
+          <div class="event">
+            <div class="date clickable" onclick="toggleEventDetails(this)">
+              📅 June 5 <span class="toggle-hint">[+]</span>
+            </div>
+            <div class="event-details" style="display: none">
+              <div class="call-summary">
+                <p>
+                  📞 Answered – 12:19 AM, 9:45 PM, 11:24 PM; ❌ Declined – 11:22
+                  PM, 11:23 PM; 📵 Multiple not answered
+                </p>
+              </div>
+              <div class="call-details">
+                <strong>Calls by Me</strong>
+                <ul>
+                  <li>📞 Answered – 12:19 AM (56 min 14 sec)</li>
+                  <li>📵 Not Answered – 1:28 PM</li>
+                  <li>📵 Not Answered – 7:08 PM</li>
+                  <li>📵 Not Answered – 7:13 PM</li>
+                  <li>📵 Not Answered – 7:15 PM</li>
+                  <li>📵 Not Answered – 7:21 PM</li>
+                  <li>📵 Not Answered – 7:23 PM</li>
+                  <li>📵 Not Answered – 7:31 PM</li>
+                  <li>📵 Not Answered – 7:34 PM</li>
+                  <li>📞 Answered – 9:45 PM (59 min 57 sec)</li>
+                  <li>❌ Declined – 11:22 PM</li>
+                  <li>❌ Declined – 11:23 PM</li>
+                  <li>📞 Answered – 11:24 PM (30 min 49 sec)</li>
+                </ul>
+                <strong>Calls by Her</strong>
+                <ul>
+                  <li>📞 Answered – 1:19 AM (7 sec)</li>
+                  <li>📞 Answered – 1:25 AM (7 hr 0 min 18 sec)</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- June 6 -->
+          <div class="event">
+            <div class="date clickable" onclick="toggleEventDetails(this)">
+              📅 June 6 <span class="toggle-hint">[+]</span>
+            </div>
+            <div class="event-details" style="display: none">
+              <div class="call-summary">
+                <p>📞 Answered – 8:17 PM, 8:36 PM, 9:23 PM, 9:28 PM</p>
+              </div>
+              <div class="call-details">
+                <strong>Calls by Her</strong>
+                <ul>
+                  <li>📞 Answered – 8:17 PM (7 min 50 sec)</li>
+                  <li>📞 Answered – 8:36 PM (3 min 35 sec)</li>
+                  <li>📞 Answered – 9:23 PM (4 min 21 sec)</li>
+                </ul>
+                <strong>Calls by Me</strong>
+                <ul>
+                  <li>📞 Answered – 9:28 PM (11 min 47 sec)</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- June 7 -->
+          <div class="event">
+            <div class="date clickable" onclick="toggleEventDetails(this)">
+              📅 June 7 <span class="toggle-hint">[+]</span>
+            </div>
+            <div class="event-details" style="display: none">
+              <div class="call-summary">
+                <p>
+                  📞 Answered – 12:13 AM, 3:42 PM, 5:54 PM (video), 7:01 PM,
+                  10:25 PM, 10:56 PM, 8:17 PM (by me)
+                </p>
+              </div>
+              <div class="call-details">
+                <strong>Calls by Her</strong>
+                <ul>
+                  <li>📞 Answered – 12:13 AM (1 hr 16 min 17 sec)</li>
+                  <li>📞 Answered – 3:42 PM (5 min 20 sec)</li>
+                  <li>🎥 Video Call – 5:54 PM (48 min 23 sec)</li>
+                  <li>📞 Answered – 7:01 PM (24 min 27 sec)</li>
+                  <li>📞 Answered – 10:25 PM (22 min 5 sec)</li>
+                  <li>📞 Answered – 10:56 PM (1 hr 40 min 11 sec)</li>
+                </ul>
+                <strong>Calls by Me</strong>
+                <ul>
+                  <li>📞 Answered – 8:17 PM (21 sec)</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- June 8 -->
+          <div class="event">
+            <div class="date clickable" onclick="toggleEventDetails(this)">
+              📅 June 8 <span class="toggle-hint">[+]</span>
+            </div>
+            <div class="event-details" style="display: none">
+              <div class="call-summary">
+                <p>
+                  📞 Answered – 12:38 AM, 3:17 PM, 3:57 PM, 9:54 PM, 10:06 PM
+                </p>
+              </div>
+              <div class="call-details">
+                <strong>Calls by Her</strong>
+                <ul>
+                  <li>📞 Answered – 12:38 AM (3 hr 18 min 59 sec)</li>
+                  <li>📞 Answered – 3:17 PM (40 min 2 sec)</li>
+                  <li>📞 Answered – 3:57 PM (57 min 7 sec)</li>
+                  <li>📞 Answered – 9:54 PM (11 min 29 sec)</li>
+                  <li>📞 Answered – 10:06 PM (2 hr 1 min 21 sec)</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- June 9 -->
+          <div class="event">
+            <div class="date clickable" onclick="toggleEventDetails(this)">
+              📅 June 9 <span class="toggle-hint">[+]</span>
+            </div>
+            <div class="event-details" style="display: none">
+              <div class="call-summary">
+                <p>
+                  📵 7x Not Answered, ❌ 2x Missed, 📞 Answered – 7:41 PM, 11:06
+                  PM
+                </p>
+              </div>
+              <div class="call-details">
+                <strong>Calls by Me</strong>
+                <ul>
+                  <li>📵 Not Answered – 3:30 PM</li>
+                  <li>📵 Not Answered – 4:06 PM</li>
+                  <li>📵 Not Answered – 4:23 PM</li>
+                  <li>📵 Not Answered – 5:57 PM</li>
+                  <li>📵 Not Answered – 10:41 PM</li>
+                  <li>📵 Not Answered – 10:46 PM</li>
+                  <li>📵 Not Answered – 10:58 PM</li>
+                </ul>
+                <strong>Calls by Her</strong>
+                <ul>
+                  <li>❌ Missed – 5:38 PM</li>
+                  <li>📞 Answered – 7:41 PM (2 hr 17 min 20 sec)</li>
+                  <li>❌ Missed – 11:02 PM</li>
+                  <li>📞 Answered – 11:06 PM (1 hr 24 min 36 sec)</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- June 11 -->
+          <div class="event">
+            <div class="date clickable" onclick="toggleEventDetails(this)">
+              📅 June 11 <span class="toggle-hint">[+]</span>
+            </div>
+            <div class="event-details" style="display: none">
+              <div class="call-summary">
+                <p>📞 Answered – 12:44 AM, 2:21 AM</p>
+              </div>
+              <div class="call-details">
+                <strong>Calls by Her</strong>
+                <ul>
+                  <li>📞 Answered – 12:44 AM (1 hr 28 min 9 sec)</li>
+                  <li>📞 Answered – 2:21 AM (54 min 2 sec)</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- June 12 -->
+          <div class="event">
+            <div class="date clickable" onclick="toggleEventDetails(this)">
+              📅 June 12 <span class="toggle-hint">[+]</span>
+            </div>
+            <div class="event-details" style="display: none">
+              <div class="call-summary">
+                <p>📞 Answered – 12:24 AM, 1:02 AM</p>
+              </div>
+              <div class="call-details">
+                <strong>Calls by Her</strong>
+                <ul>
+                  <li>📞 Answered – 12:24 AM (26 min 35 sec)</li>
+                  <li>📞 Answered – 1:02 AM (12 min 9 sec)</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- June 13 -->
+          <div class="event">
+            <div class="date clickable" onclick="toggleEventDetails(this)">
+              📅 June 13 <span class="toggle-hint">[+]</span>
+            </div>
+            <div class="event-details" style="display: none">
+              <div class="call-summary">
+                <p>
+                  ❌ Missed – 9:27 PM, 📞 Answered – 10:24 PM, 10:51 PM, 10:57
+                  PM
+                </p>
+              </div>
+              <div class="call-details">
+                <strong>Calls by Her</strong>
+                <ul>
+                  <li>❌ Missed – 9:27 PM</li>
+                  <li>📞 Answered – 10:24 PM (26 min 32 sec)</li>
+                </ul>
+                <strong>Calls by Me</strong>
+                <ul>
+                  <li>📵 Not Answered – 9:30 PM</li>
+                  <li>📵 Unavailable – 10:51 PM</li>
+                  <li>📞 Answered – 10:51 PM (5 min 11 sec)</li>
+                  <li>📞 Answered – 10:57 PM (7 min 33 sec)</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- June 14 -->
+          <div class="event">
+            <div class="date clickable" onclick="toggleEventDetails(this)">
+              📅 June 14 <span class="toggle-hint">[+]</span>
+            </div>
+            <div class="event-details" style="display: none">
+              <div class="call-summary">
+                <p>📞 Answered – 12:51 AM, 📵 Not Answered – 10:38 PM</p>
+              </div>
+              <div class="call-details">
+                <strong>Calls by Her</strong>
+                <ul>
+                  <li>📞 Answered – 12:51 AM (1 hr 14 min 38 sec)</li>
+                </ul>
+                <strong>Calls by Me</strong>
+                <ul>
+                  <li>📵 Not Answered – 10:38 PM</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- June 15 -->
+          <div class="event">
+            <div class="date clickable" onclick="toggleEventDetails(this)">
+              📅 June 15 <span class="toggle-hint">[+]</span>
+            </div>
+            <div class="event-details" style="display: none">
+              <div class="call-summary">
+                <p>❌ Declined – 6x, 📵 Not Answered – 2x</p>
+              </div>
+              <div class="call-details">
+                <strong>Calls by Me</strong>
+                <ul>
+                  <li>❌ Declined – 12:12 AM</li>
+                  <li>❌ Declined – 12:13 AM</li>
+                  <li>❌ Declined – 12:15 AM</li>
+                  <li>❌ Declined – 12:19 AM</li>
+                  <li>❌ Declined – 12:19 AM</li>
+                  <li>❌ Declined – 12:20 AM</li>
+                  <li>📵 Not Answered – 6:19 PM</li>
+                  <li>📵 Not Answered – 6:19 PM</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- June 16 -->
+          <div class="event">
+            <div class="date clickable" onclick="toggleEventDetails(this)">
+              📅 June 16 <span class="toggle-hint">[+]</span>
+            </div>
+            <div class="event-details" style="display: none">
+              <div class="call-summary">
+                <p>
+                  📞 Answered – 12:12 AM, 11:57 AM, 12:18 AM; ❌ Missed – 2x
+                </p>
+              </div>
+              <div class="call-details">
+                <strong>Calls by Her</strong>
+                <ul>
+                  <li>📞 Answered – 12:12 AM (5 min 32 sec)</li>
+                  <li>❌ Missed – 1:53 AM</li>
+                  <li>❌ Missed – 1:54 AM</li>
+                  <li>📞 Answered – 11:57 AM (12 min 17 sec)</li>
+                </ul>
+                <strong>Calls by Me</strong>
+                <ul>
+                  <li>📞 Answered – 12:18 AM (56 min 1 sec)</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- June 17 -->
+          <div class="event">
+            <div class="date clickable" onclick="toggleEventDetails(this)">
+              📅 June 17 <span class="toggle-hint">[+]</span>
+            </div>
+            <div class="event-details" style="display: none">
+              <div class="call-summary">
+                <p>
+                  📵 Not Answered – 12:08 AM, ❌ Declined – 3x, 📞 Answered – 2x
+                </p>
+              </div>
+              <div class="call-details">
+                <strong>Calls by Me</strong>
+                <ul>
+                  <li>📵 Not Answered – 12:08 AM</li>
+                  <li>❌ Declined – 12:10 AM</li>
+                  <li>❌ Declined – 12:10 AM</li>
+                  <li>❌ Declined – 12:11 AM</li>
+                  <li>📞 Answered – 12:11 AM (18 min 36 sec)</li>
+                </ul>
+                <strong>Calls by Her</strong>
+                <ul>
+                  <li>📞 Answered – 12:31 AM (1 hr 6 min 8 sec)</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- June 18 -->
+          <div class="event">
+            <div class="date clickable" onclick="toggleEventDetails(this)">
+              📅 June 18 <span class="toggle-hint">[+]</span>
+            </div>
+            <div class="event-details" style="display: none">
+              <div class="call-summary">
+                <p>📞 Answered – 10:49 PM, 11:59 PM</p>
+              </div>
+              <div class="call-details">
+                <strong>Calls by Her</strong>
+                <ul>
+                  <li>📞 Answered – 10:49 PM (35 min 56 sec)</li>
+                  <li>📞 Answered – 11:59 PM (3 hr 9 min 43 sec)</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- June 19 -->
+          <div class="event">
+            <div class="date clickable" onclick="toggleEventDetails(this)">
+              📅 June 19 <span class="toggle-hint">[+]</span>
+            </div>
+            <div class="event-details" style="display: none">
+              <div class="call-summary">
+                <p>
+                  📞 Answered – 5x, 📵 Not Answered – 4:07 PM, ❌ Missed – 2x
+                </p>
+              </div>
+              <div class="call-details">
+                <strong>Calls by Me</strong>
+                <ul>
+                  <li>📵 Not Answered – 4:07 PM</li>
+                  <li>📞 Answered – 9:58 PM (5 min 56 sec)</li>
+                  <li>📞 Answered – 10:04 PM (47 sec)</li>
+                  <li>❌ Unavailable – 10:06 PM</li>
+                  <li>📞 Answered – 10:06 PM (16 min 14 sec)</li>
+                  <li>📞 Answered – 10:23 PM (1 min 26 sec)</li>
+                </ul>
+                <strong>Calls by Her</strong>
+                <ul>
+                  <li>📞 Answered – 9:58 PM (1 sec)</li>
+                  <li>❌ Missed – 10:24 PM</li>
+                  <li>❌ Missed – 10:24 PM</li>
+                  <li>📞 Answered – 11:59 PM (2 hr 23 min 9 sec)</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- June 20 -->
+          <div class="event">
+            <div class="date clickable" onclick="toggleEventDetails(this)">
+              📅 June 20 <span class="toggle-hint">[+]</span>
+            </div>
+            <div class="event-details" style="display: none">
+              <div class="call-summary">
+                <p>📞 Answered – 6:41 PM, 10:53 PM, 11:27 PM</p>
+              </div>
+              <div class="call-details">
+                <strong>Calls by Her</strong>
+                <ul>
+                  <li>📞 Answered – 6:41 PM (48 min 35 sec)</li>
+                  <li>📞 Answered – 10:53 PM (32 min 30 sec)</li>
+                </ul>
+                <strong>Calls by Me</strong>
+                <ul>
+                  <li>📞 Answered – 11:27 PM (1 hr 10 min 43 sec)</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- June 21 -->
+          <div class="event">
+            <div class="date clickable" onclick="toggleEventDetails(this)">
+              📅 June 21 <span class="toggle-hint">[+]</span>
+            </div>
+            <div class="event-details" style="display: none">
+              <div class="call-summary">
+                <p>
+                  📞 Answered – 4:35 PM, 📵 Not Answered – 3x, ❌ Declined –
+                  5:48 PM
+                </p>
+              </div>
+              <div class="call-details">
+                <strong>Calls by Me</strong>
+                <ul>
+                  <li>📞 Answered – 4:35 PM (6 sec)</li>
+                  <li>📵 Not Answered – 4:35 PM</li>
+                  <li>📵 Not Answered – 5:47 PM</li>
+                  <li>❌ Declined – 5:48 PM</li>
+                  <li>📵 Not Answered – 6:52 PM</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- June 22 -->
+          <div class="event">
+            <div class="date clickable" onclick="toggleEventDetails(this)">
+              📅 June 22 <span class="toggle-hint">[+]</span>
+            </div>
+            <div class="event-details" style="display: none">
+              <div class="call-summary">
+                <p>📞 Answered – 3x, ❌ Missed/Declined – 2x</p>
+              </div>
+              <div class="call-details">
+                <strong>Calls by Her</strong>
+                <ul>
+                  <li>❌ Missed – 12:13 AM</li>
+                  <li>📞 Answered – 12:16 AM (53 min 7 sec)</li>
+                  <li>📞 Answered – 9:24 PM (2 hr 35 min 37 sec)</li>
+                </ul>
+                <strong>Calls by Me</strong>
+                <ul>
+                  <li>📞 Answered – 1:10 AM (1 hr 4 min 54 sec)</li>
+                  <li>❌ Declined – 2:19 PM</li>
+                  <li>📞 Answered – 2:20 PM (2 sec)</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- June 23 -->
+          <div class="event">
+            <div class="date clickable" onclick="toggleEventDetails(this)">
+              📅 June 23 <span class="toggle-hint">[+]</span>
+            </div>
+            <div class="event-details" style="display: none">
+              <div class="call-summary">
+                <p>
+                  📞 Answered – many, ❌ Declined – many, 📵 Not Answered – many
+                </p>
+              </div>
+              <div class="call-details">
+                <strong>Calls by Her</strong>
+                <ul>
+                  <li>❌ Missed – 8:41 PM</li>
+                  <li>📞 Answered – 11:34 PM (1 hr 11 min 41 sec)</li>
+                </ul>
+                <strong>Calls by Me</strong>
+                <ul>
+                  <li>📞 Answered – 8:43 PM (2 sec)</li>
+                  <li>📞 Answered – 8:44 PM (1 sec)</li>
+                  <li>❌ Declined – 8:45 PM</li>
+                  <li>❌ Declined – 8:45 PM</li>
+                  <li>📞 Answered – 8:45 PM (2 sec)</li>
+                  <li>❌ Declined – 8:45 PM</li>
+                  <li>❌ Declined – 8:46 PM</li>
+                  <li>📵 Not Answered – 8:46 PM</li>
+                  <li>📵 Not Answered – 8:47 PM</li>
+                  <li>📵 Not Answered – 8:48 PM</li>
+                  <li>❌ Declined – 8:51 PM</li>
+                  <li>📵 Not Answered – 8:52 PM</li>
+                  <li>📵 Not Answered – 8:53 PM</li>
+                  <li>📵 Not Answered – 8:55 PM</li>
+                  <li>📵 Not Answered – 8:56 PM</li>
+                  <li>📵 Not Answered – 8:57 PM</li>
+                  <li>📵 Not Answered – 8:58 PM</li>
+                  <li>📞 Answered – 9:01 PM (29 sec)</li>
+                  <li>❌ Declined – 9:57 PM</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- June 24 -->
+          <div class="event">
+            <div class="date clickable" onclick="toggleEventDetails(this)">
+              📅 June 24 <span class="toggle-hint">[+]</span>
+            </div>
+            <div class="event-details" style="display: none">
+              <div class="call-summary">
+                <p>📞 Answered – 12:55 AM, 10:55 PM</p>
+              </div>
+              <div class="call-details">
+                <strong>Calls by Her</strong>
+                <ul>
+                  <li>📞 Answered – 12:55 AM (24 min 2 sec)</li>
+                  <li>📞 Answered – 10:55 PM (3 hr 37 min 40 sec)</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- June 25 -->
+          <div class="event">
+            <div class="date clickable" onclick="toggleEventDetails(this)">
+              📅 June 25 <span class="toggle-hint">[+]</span>
+            </div>
+            <div class="event-details" style="display: none">
+              <div class="call-summary">
+                <p>
+                  📞 Answered – 8:43 PM, 9:02 PM, 9:56 PM, 10:32 PM, 10:43 PM,
+                  11:53 PM (2x), ❌ Missed – 10:56 PM
+                </p>
+              </div>
+              <div class="call-details">
+                <strong>Calls by Her</strong>
+                <ul>
+                  <li>📞 Answered – 8:43 PM (6 min 10 sec)</li>
+                  <li>📞 Answered – 9:56 PM (35 min 11 sec)</li>
+                  <li>❌ Missed – 10:56 PM</li>
+                </ul>
+                <strong>Calls by Me</strong>
+                <ul>
+                  <li>📞 Answered – 9:02 PM (30 min 6 sec)</li>
+                  <li>📞 Answered – 10:32 PM (10 min 49 sec)</li>
+                  <li>📞 Answered – 10:43 PM (11 min 45 sec)</li>
+                  <li>❌ Unavailable – 10:55 PM</li>
+                  <li>📞 Answered – 11:53 PM (50 min 26 sec)</li>
+                  <li>📞 Answered – 11:53 PM (19 min 26 sec)</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- June 26 -->
+          <div class="event">
+            <div class="date clickable" onclick="toggleEventDetails(this)">
+              📅 June 26 <span class="toggle-hint">[+]</span>
+            </div>
+            <div class="event-details" style="display: none">
+              <div class="call-summary">
+                <p>📞 Answered – 12:13 AM, 8:32 PM, 10:06 PM, 11:39 PM</p>
+              </div>
+              <div class="call-details">
+                <strong>Calls by Me</strong>
+                <ul>
+                  <li>📞 Answered – 12:13 AM (1 hr 38 min 4 sec)</li>
+                </ul>
+                <strong>Calls by Her</strong>
+                <ul>
+                  <li>📞 Answered – 8:32 PM (5 min 21 sec)</li>
+                  <li>📞 Answered – 10:06 PM (1 hr 30 min 7 sec)</li>
+                  <li>📞 Answered – 11:39 PM (52 min 53 sec)</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- June 27 -->
+          <div class="event">
+            <div class="date clickable" onclick="toggleEventDetails(this)">
+              📅 June 27 <span class="toggle-hint">[+]</span>
+            </div>
+            <div class="event-details" style="display: none">
+              <div class="call-summary">
+                <p>
+                  📞 Answered – multiple, 📵 Not Answered – 12:34 AM, ❌ Missed
+                  – 7:06 PM
+                </p>
+              </div>
+              <div class="call-details">
+                <strong>Calls by Me</strong>
+                <ul>
+                  <li>📵 Not Answered – 12:34 AM</li>
+                  <li>📞 Answered – 4:21 PM (35 min 39 sec)</li>
+                  <li>❌ Declined – 7:22 PM</li>
+                  <li>📞 Answered – 7:22 PM (3 min 22 sec)</li>
+                  <li>📞 Answered – 9:39 PM (8 min 47 sec)</li>
+                  <li>📞 Answered – 9:48 PM (15 min 2 sec)</li>
+                  <li>📞 Answered – 10:05 PM (33 min 4 sec)</li>
+                  <li>📞 Answered – 10:47 PM (8 hr 45 min 22 sec)</li>
+                </ul>
+                <strong>Calls by Her</strong>
+                <ul>
+                  <li>📞 Answered – 12:36 AM (36 min 59 sec)</li>
+                  <li>❌ Missed – 7:06 PM</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- June 28 -->
+          <div class="event">
+            <div class="date clickable" onclick="toggleEventDetails(this)">
+              📅 June 28 <span class="toggle-hint">[+]</span>
+            </div>
+            <div class="event-details" style="display: none">
+              <div class="call-summary">
+                <p>
+                  📞 Answered – 11:50 PM, ❌ Declined – 2x, 📵 Not Answered –
+                  9:59 AM, ❌ Missed – 11:04 PM
+                </p>
+              </div>
+              <div class="call-details">
+                <strong>Calls by Me</strong>
+                <ul>
+                  <li>📵 Not Answered – 9:59 AM</li>
+                  <li>❌ Declined – 10:23 PM</li>
+                  <li>❌ Declined – 10:23 PM</li>
+                </ul>
+                <strong>Calls by Her</strong>
+                <ul>
+                  <li>❌ Missed – 11:04 PM</li>
+                  <li>📞 Answered – 11:50 PM (19 min 5 sec)</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- June 29 -->
+          <div class="event">
+            <div class="date clickable" onclick="toggleEventDetails(this)">
+              📅 June 29 <span class="toggle-hint">[+]</span>
+            </div>
+            <div class="event-details" style="display: none">
+              <div class="call-summary">
+                <p>📞 Answered – 9:35 PM, 9:37 PM</p>
+              </div>
+              <div class="call-details">
+                <strong>Calls by Her</strong>
+                <ul>
+                  <li>📞 Answered – 9:35 PM (1 min 1 sec)</li>
+                </ul>
+                <strong>Calls by Me</strong>
+                <ul>
+                  <li>📞 Answered – 9:37 PM (3 hr 13 min 16 sec)</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- June 30 -->
+          <div class="event">
+            <div class="date clickable" onclick="toggleEventDetails(this)">
+              📅 June 30 <span class="toggle-hint">[+]</span>
+            </div>
+            <div class="event-details" style="display: none">
+              <div class="call-summary">
+                <p>
+                  📞 Answered – 11:29 PM, 📵 Not Answered – 2x, ❌ Declined –
+                  10:48 PM
+                </p>
+              </div>
+              <div class="call-details">
+                <strong>Calls by Me</strong>
+                <ul>
+                  <li>📵 Not Answered – 10:45 PM</li>
+                  <li>❌ Declined – 10:48 PM</li>
+                  <li>📵 Not Answered – 11:47 PM</li>
+                  <li>📵 Not Answered – 11:47 PM</li>
+                </ul>
+                <strong>Calls by Her</strong>
+                <ul>
+                  <li>📞 Answered – 11:29 PM (17 min 28 sec)</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- July Section -->
+      <div class="month-block">
+        <button class="month-btn">📅 July 2025</button>
+        <div class="month-content">
+          <!-- July 1 -->
+          <div class="event">
+            <div class="date clickable" onclick="toggleEventDetails(this)">
+              📅 July 1 <span class="toggle-hint">[+]</span>
+            </div>
+            <div class="event-details" style="display: none">
+              <div class="call-summary">
+                <p>📞 Answered – 12:25 AM, 1:13 AM, 1:23 AM</p>
+              </div>
+              <div class="call-details">
+                <strong>Calls by Her</strong>
+                <ul>
+                  <li>📞 Answered – 12:25 AM (26 min 44 sec)</li>
+                  <li>📞 Answered – 1:13 AM (9 min 57 sec)</li>
+                </ul>
+                <strong>Calls by Me</strong>
+                <ul>
+                  <li>📞 Answered – 1:23 AM (3 hr 31 min 9 sec)</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- July 2 -->
+          <div class="event">
+            <div class="date clickable" onclick="toggleEventDetails(this)">
+              📅 July 2 <span class="toggle-hint">[+]</span>
+            </div>
+            <div class="event-details" style="display: none">
+              <div class="call-summary">
+                <p>❌ Declined – 12:19 AM, 📞 Answered – 12:21 AM</p>
+              </div>
+              <div class="call-details">
+                <strong>Calls by Me</strong>
+                <ul>
+                  <li>❌ Declined – 12:19 AM</li>
+                  <li>📞 Answered – 12:21 AM (1 hr 3 min 29 sec)</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- July 3 -->
+          <div class="event">
+            <div class="date clickable" onclick="toggleEventDetails(this)">
+              📅 July 3 <span class="toggle-hint">[+]</span>
+            </div>
+            <div class="event-details" style="display: none">
+              <div class="call-summary">
+                <p>
+                  ❌ Missed – 1:29 AM, 📞 Answered – 10:04 PM, 10:06 PM, ❌
+                  Declined – 2x, 📵 Not Answered – 10:19 PM
+                </p>
+              </div>
+              <div class="call-details">
+                <strong>Calls by Her</strong>
+                <ul>
+                  <li>❌ Missed – 1:29 AM</li>
+                  <li>📞 Answered – 10:04 PM (1 min 1 sec)</li>
+                </ul>
+                <strong>Calls by Me</strong>
+                <ul>
+                  <li>❌ Declined – 10:05 PM</li>
+                  <li>📞 Answered – 10:06 PM (2 min 7 sec)</li>
+                  <li>📵 Not Answered – 10:19 PM</li>
+                  <li>❌ Declined – 10:19 PM</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- July 4 -->
+          <div class="event">
+            <div class="date clickable" onclick="toggleEventDetails(this)">
+              📅 July 4 <span class="toggle-hint">[+]</span>
+            </div>
+            <div class="event-details" style="display: none">
+              <div class="call-summary">
+                <p>
+                  📞 Answered – 10:06 PM, 10:34 PM, 📵 Not Answered – 6x, ❌
+                  Declined – 4x
+                </p>
+              </div>
+              <div class="call-details">
+                <strong>Calls by Me</strong>
+                <ul>
+                  <li>📵 Not Answered – 9:30 PM</li>
+                  <li>❌ Declined – 9:32 PM</li>
+                  <li>❌ Declined – 9:32 PM</li>
+                  <li>📵 Not Answered – 9:32 PM</li>
+                  <li>❌ Declined – 9:37 PM</li>
+                  <li>❌ Declined – 9:38 PM</li>
+                  <li>📵 Not Answered – 9:38 PM</li>
+                  <li>📵 Not Answered – 9:39 PM</li>
+                  <li>📵 Not Answered – 9:40 PM</li>
+                  <li>📵 Not Answered – 9:43 PM</li>
+                  <li>📵 Not Answered – 9:45 PM</li>
+                  <li>📞 Answered – 10:34 PM (23 min 25 sec)</li>
+                </ul>
+                <strong>Calls by Her</strong>
+                <ul>
+                  <li>📞 Answered – 10:06 PM (19 min 12 sec)</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- July 5 -->
+          <div class="event">
+            <div class="date clickable" onclick="toggleEventDetails(this)">
+              📅 July 5 <span class="toggle-hint">[+]</span>
+            </div>
+            <div class="event-details" style="display: none">
+              <div class="call-summary">
+                <p>
+                  📞 Answered – 6:48 PM, 📵 Not Answered – 5x, 📵 Unavailable –
+                  8:08 PM, ❌ Missed – 6:46 PM
+                </p>
+              </div>
+              <div class="call-details">
+                <strong>Calls by Me</strong>
+                <ul>
+                  <li>📵 Not Answered – 12:32 PM</li>
+                  <li>📞 Answered – 6:48 PM (1 hr 20 min 4 sec)</li>
+                  <li>📵 Unavailable – 8:08 PM</li>
+                  <li>📵 Not Answered – 8:10 PM</li>
+                  <li>📵 Not Answered – 8:10 PM</li>
+                  <li>📵 Not Answered – 8:10 PM</li>
+                  <li>📵 Not Answered – 10:55 PM</li>
+                </ul>
+                <strong>Calls by Her</strong>
+                <ul>
+                  <li>❌ Missed – 6:46 PM</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- July 6 -->
+          <div class="event">
+            <div class="date clickable" onclick="toggleEventDetails(this)">
+              📅 July 6 <span class="toggle-hint">[+]</span>
+            </div>
+            <div class="event-details" style="display: none">
+              <div class="call-summary">
+                <p>📞 Answered – 4:50 PM</p>
+              </div>
+              <div class="call-details">
+                <strong>Calls by Me</strong>
+                <ul>
+                  <li>📞 Answered – 4:50 PM (50 min 15 sec)</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- July 7 -->
+          <div class="event">
+            <div class="date clickable" onclick="toggleEventDetails(this)">
+              📅 July 7 <span class="toggle-hint">[+]</span>
+            </div>
+            <div class="event-details" style="display: none">
+              <div class="call-summary">
+                <p>✅ Answered – 4x, 📭 Not Answered – 2x, ❌ Declined – 2x</p>
+              </div>
+
+              <div class="call-details">
+                <strong>Calls by Me</strong>
+                <ul>
+                  <li>❌ Declined – 3:27 PM</li>
+                  <li>📭 Not Answered – 3:28 PM</li>
+                  <li>📭 Not Answered – 8:29 PM</li>
+                  <li>❌ Declined – 8:30 PM</li>
+                  <li>✅ Answered – 9:51 PM (21 min 50 sec)</li>
+                </ul>
+              </div>
+
+              <div class="call-details">
+                <strong>Calls by Her</strong>
+                <ul>
+                  <li>✅ Answered – 8:27 PM (2 min 4 sec)</li>
+                  <li>✅ Answered – 8:50 PM (1 hr 0 min 45 sec)</li>
+                  <li>✅ Answered – 10:14 PM (1 hr 14 min 3 sec)</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- July 8 -->
+          <div class="event">
+            <div class="date clickable" onclick="toggleEventDetails(this)">
+              📅 July 8 <span class="toggle-hint">[+]</span>
+            </div>
+            <div class="event-details" style="display: none">
+              <div class="call-summary">
+                <p>
+                  ✅ Answered – 2x, 📭 Not Answered – 1x, 📵 Unavailable – 4x
+                </p>
+              </div>
+
+              <div class="call-details">
+                <strong>Calls by Me</strong>
+                <ul>
+                  <li>✅ Answered – 8:00 AM (59 sec)</li>
+                  <li>📵 Unavailable – 9:44 AM</li>
+                  <li>📵 Unavailable – 9:45 AM</li>
+                  <li>📵 Unavailable – 9:45 AM</li>
+                  <li>📵 Unavailable – 9:46 AM</li>
+                  <li>📭 Not Answered – 9:47 AM</li>
+                </ul>
+              </div>
+
+              <div class="call-details">
+                <strong>Calls by Her</strong>
+                <ul>
+                  <li>✅ Answered – 10:37 PM (1 hr 57 min 12 sec)</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    
+    <!-- Bye Button (placed after messages/call timeline) -->
+    <div class="bye-button-wrapper">
+      <button id="byeBtn" class="bye-button">Bye 👋</button>
+    </div>
+
+    <!-- Final Message Modal -->
+    <div id="finalModal" class="modal hidden">
+      <!-- <div class="modal-content">
+        <span id="closeModal" class="close">&times;</span>
+        <canvas id="particleCanvas"></canvas>
+        <h2>🌸 One Last Thing...</h2>
+        <p id="finalMessageTyping"></p>
+      </div> -->
+      <div class="modal-content">
+        <span id="closeModal" class="close">&times;</span>
+        <canvas id="particleCanvas"></canvas>
+
+        <h2>🌸 One Last Thing...</h2>
+
+        <div id="finalMessageContainer">
+          <p id="finalMessageTyping"></p>
+        </div>
+
+        <!-- Hidden icon by default -->
+        <span
+          id="downloadImageIcon"
+          title="Download this message"
+          class="hidden"
+          style="cursor: pointer; font-size: 20px"
+          >📸</span
+        >
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="./js/happy.js"></script>
+  </body>
+</html>

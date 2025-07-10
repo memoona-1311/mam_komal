@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Daily Routine</title>
+  <style>
+    body {
+      background: #fff;
+      font-family: 'Courier New', monospace;
+      color: #000;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .whiteboard {
+      border: 3px solid #000;
+      padding: 20px;
+      width: 90%;
+      max-width: 700px;
+      background-color: #fdfdfd;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      margin-top: 20px;
+    }
+
+    .scene {
+      display: none;
+      font-size: 1.1rem;
+      margin: 15px 0;
+      opacity: 0;
+      transition: opacity 0.8s ease;
+    }
+
+    .scene.visible {
+      display: block;
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+  <h1>🖊️ My Daily Routine</h1>
+  <div class="whiteboard" id="whiteboard">
+    <div class="scene">🕘 9:00 AM – I reach office and wait for her to come.</div>
+    <div class="scene">🚪 I keep looking at the door, hoping she'll arrive soon.</div>
+    <div class="scene">😄 She teases me saying, "I'm not coming today" – and I fall for it every time.</div>
+    <div class="scene">😔 My mood drops without her. It's hard to stay without her presence.</div>
+    <div class="scene">😊 Then she arrives, and I pretend not to notice – but inside, I'm full of joy.</div>
+    <div class="scene">🗨️ I wait for her to talk to me. Sometimes we talk for seconds, sometimes minutes.</div>
+    <div class="scene">👋 I often walk to her seat just to say hi or hello for a moment.</div>
+    <div class="scene">🕌 We wait for Dhuhr prayer time – a chance to talk more.</div>
+    <div class="scene">🍱 At lunch, I wait for her call. She knows, and every time she calls, it makes me smile.</div>
+    <div class="scene">😄 We sometimes gossip after lunch – light moments I cherish.</div>
+    <div class="scene">🤝 I hold her hand when we talk. That’s my favorite thing.</div>
+    <div class="scene">👀 Sometimes I just look at her in silence from behind my seat. It brings me peace.</div>
+    <div class="scene">🚶‍♂️ On leaving, I always wait until she finishes so we can go together.</div>
+    <div class="scene">🕒 At 3:00 PM, I send my driver a message to delay pickup till 6:40 – just to leave with her.</div>
+    <div class="scene">👋 We say goodbye with a handshake. I always remind her if she forgets – it's special to me.</div>
+    <div class="scene">🏡 After reaching home, we message each other.</div>
+    <div class="scene">📞 In the evening, we talk on the phone. Sometimes it ends... sometimes it doesn't.</div>
+  </div>
+
+  <script>
+    const scenes = document.querySelectorAll(".scene");
+    let index = 0;
+
+    function revealNextScene() {
+      if (index < scenes.length) {
+        scenes[index].classList.add("visible");
+        index++;
+        setTimeout(revealNextScene, 2500);
+      }
+    }
+
+    window.onload = revealNextScene;
+  </script>
+</body>
+</html>

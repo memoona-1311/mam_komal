@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our First Chat</title>
+    <link rel="stylesheet" href="./css/chat.css" />
+  </head>
+  <body>
+    <div class="chat-box" id="chat-box">
+      <div class="chat-date">December 25, 2024</div>
+
+      <div class="chat-message you">
+        <span class="sender">You:</span>
+        <p>Assalamualaikum WRWB</p>
+        <span class="timestamp">1:49 PM</span>
+      </div>
+
+      <div class="chat-message friend">
+        <span class="sender">Her:</span>
+        <p>Walikumslam</p>
+        <span class="timestamp">1:50 PM</span>
+      </div>
+
+      <div class="chat-message friend">
+        <span class="sender">Her:</span>
+        <p style="text-align: center; margin: 0">
+          <img
+            src="./img/icon.png"
+            alt="shared image"
+            style="width: 45px; height: 45px; border-radius: 6px"
+          />
+        </p>
+
+        <span class="timestamp">1:50 PM</span>
+      </div>
+
+      <div class="chat-message you">
+        <span class="sender">You:</span>
+        <p>JazakAllah 🥰</p>
+        <span class="timestamp">1:50 PM</span>
+      </div>
+
+      <div class="chat-message friend">
+        <span class="sender">Her:</span>
+        <p>jazakulkhair</p>
+        <span class="timestamp">2:01 PM</span>
+      </div>
+
+      <!-- <div class="chat-message you typing-bubble">
+  <p>Typing...</p>
+</div> -->
+
+      <div class="chat-divider">📞 First Call Memory</div>
+
+      <div class="chat-call-info">
+        <p>📞 Our first call was on <strong>April 9, 2025</strong></p>
+        <p>Duration: <strong>1 minute 33 seconds</strong></p>
+      </div>
+    </div>
+
+    <!-- Continue Button -->
+    <div class="continue-wrapper">
+      <button id="continueBtn">Continue ➡️</button>
+    </div>
+
+    <!-- Modal Popup -->
+    <div id="choiceModal" class="modal hidden">
+      <div class="modal-content">
+        <h2>One Last Question…</h2>
+        <p>
+          Do you want to see a memory that made us happy or something that once
+          made us sad?
+        </p>
+        <div class="modal-buttons">
+          <button id="happyBtn">😊 Happy</button>
+          <button id="sadBtn">😢 Sad</button>
+        </div>
+
+        <p id="typed-response" class="hidden"></p>
+      </div>
+    </div>
+
+    <script src="./js/chat.js"></script>
+  </body>
+</html>
