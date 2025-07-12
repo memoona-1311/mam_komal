@@ -370,6 +370,21 @@ unavailable 9:46 AM (call by me)
 not answered 9:47 AM (call by me)
 answered 1 hr 57 min 12 sec 10:37 PM (call by her)
 
+July 9
+not answered 11:31 AM (call by her)
+
+July 10 
+declined 11:37 PM (call by me)
+
+July 11
+answered 1 hr 9 min 30 sec 4:32 PM (call by her)  
+answered  15 min 3 sec 11:33 PM (call by her)  
+answered  1 min 20 sec 11:33 PM (call by me)  
+answered  1 hr 49 min 33 sec 11:33 PM (call by me)  
+
+July 12
+
+
 
 
 
