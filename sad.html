@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Not So Sad...</title>
+    <link rel="stylesheet" href="./css/sad.css" />
+  </head>
+  <body>
+    <h1>
+      You’ve never been a reason for my sadness — only the light that healed it.
+      🌸
+    </h1>
+
+    <p>
+      You reminded me what it means to feel safe, seen, and deeply valued.
+      <span id="secretHeart" class="hidden" title="💖 Click me wisely..."
+        >💖</span
+      >
+    </p>
+
+    <button class="locked-btn" id="lockedHappy" disabled>
+      Happy Memories (Locked) 🔒
+    </button>
+
+    <div class="clue" id="clue" title="This area is restricted.">
+      ⚠️ Top Secret: Access Level 7 Required
+    </div>
+
+    <!-- Modal for question unlock -->
+    <div id="questionModal" class="modal hidden">
+      <div class="modal-content">
+        <h2>Access Challenge 🔐</h2>
+        <p>
+          What is the first thing or gesture I liked about you on my first day
+          of office?
+        </p>
+        <input type="text" id="answerInput" placeholder="Your answer..." />
+        <button id="submitAnswer">Unlock Memory 🔓</button>
+        <p id="attemptsLeft">Attempts remaining: 3</p>
+       <p id="feedback" style="color: #ff6f91; font-style: italic;"></p>
+      </div>
+    </div>
+
+    <script src="./js/sad.js"></script>
+  </body>
+</html>

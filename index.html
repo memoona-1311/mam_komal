@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Happy Birthday</title>
+    <link rel="stylesheet" href="./css/index.css" />
+  </head>
+  <body>
+    <div class="stars"></div>
+    <div class="twinkling"></div>
+    <canvas id="star-canvas"></canvas>
+
+    <!-- Main content wrapper -->
+    <div class="content">
+      <button id="reveal-btn">Click to Reveal</button>
+
+      <!-- <div class="message-box">
+        <h1>To the One Who Feels Like Home — Happy Birthday! 🎂</h1>
+        <p id="typed-message"></p>
+      </div> -->
+      <div class="message-box hidden">
+  <h1>To the One Who Feels Like Home — Happy Birthday! 🎂</h1>
+  <p id="typed-message"></p>
+</div>
+
+
+      <div class="chat-link hidden">
+        <a href="chat.html">See Our First Chat 💬</a>
+      </div>
+    </div>
+
+    <!-- MCQ Modal -->
+    <div id="mcq-modal" class="modal hidden">
+      <div class="modal-content">
+        <h2 class="modal-question">Tusi kon? 🤔</h2>
+        <div class="options">
+          <button class="option-btn" data-option="1">Meri Bhen</button>
+          <button class="option-btn" data-option="2">
+            Memoona Bibi ki sister
+          </button>
+          <button class="option-btn" data-option="3">
+            D/O Iftikhar Ahmed ki bhen
+          </button>
+        </div>
+        <p id="feedback" class="feedback-msg"></p>
+        <p id="tries-left" class="tries-left-msg"></p>
+      </div>
+    </div>
+
+    <!-- Question 2 Modal -->
+    <div id="q2-modal" class="modal hidden">
+      <div class="modal-content">
+        <h2 class="modal-question">Main kon? 🥹</h2>
+        <p class="question-note">I am still waiting for this answer.....</p>
+        <input type="text" id="answer-input" placeholder="Your Answer..." />
+        <button id="submit-answer">Submit</button>
+        <p id="q2-feedback" class="feedback-msg"></p>
+      </div>
+    </div>
+
+    <script src="./js/index.js"></script>
+  </body>
+</html>

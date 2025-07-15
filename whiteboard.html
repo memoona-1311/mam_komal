@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .whiteboard {
+  background: white;
+  padding: 30px;
+  width: 80%;
+  margin: 40px auto;
+  border: 2px solid #000;
+  font-family: 'Courier New', monospace;
+  font-size: 1.2rem;
+  color: black;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+</style>
+<body>
+    <div class="whiteboard">
+  <p id="whiteboardText"></p>
+</div>
+
+
+
+<script>
+    const text = "You were never just a friend. You were my calm, my support, my light...";
+let i = 0;
+
+function typeWhiteboard() {
+  if (i < text.length) {
+    document.getElementById("whiteboardText").innerHTML += text.charAt(i);
+    i++;
+    setTimeout(typeWhiteboard, 50);
+  }
+}
+
+window.onload = typeWhiteboard;
+
+</script>
+</body>
+</html>
